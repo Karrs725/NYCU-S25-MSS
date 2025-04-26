@@ -1,0 +1,9 @@
+[global]
+filename=test
+direct=1
+rw=read
+size=1g
+stonewall
+
+[job]
+bs=4m

@@ -1,0 +1,13 @@
+[global]
+filename=test
+bs=1m
+size=4G
+iodepth=32
+direct=1
+stonewall
+
+[read]
+rw=read
+
+[write]
+rw=write

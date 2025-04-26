@@ -1,0 +1,12 @@
+[global]    
+filename=test
+bs=4k
+size=64m
+rw=randread
+stonewall
+
+[buffered]
+direct=0
+
+[nonbuffered]
+direct=1
