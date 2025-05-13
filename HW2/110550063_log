@@ -1,0 +1,78 @@
+==93707== Memcheck, a memory error detector
+==93707== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==93707== Using Valgrind-3.20.0 and LibVEX; rerun with -h for copyright info
+==93707== Command: ./memleak
+==93707== Parent PID: 4199
+==93707== 
+==93707== Invalid write of size 4			##error 1 : invalid write
+==93707==    at 0x1091C0: main (memleak.c:49)
+==93707==  Address 0x4a96068 is 0 bytes after a block of size 40 alloc'd
+==93707==    at 0x484884F: malloc (vg_replace_malloc.c:393)
+==93707==    by 0x10919E: main (memleak.c:46)
+==93707== 
+==93707== Invalid read of size 4			##error 2 : invalid read
+==93707==    at 0x1091ED: main (memleak.c:54)
+==93707==  Address 0x4a96068 is 0 bytes after a block of size 40 alloc'd
+==93707==    at 0x484884F: malloc (vg_replace_malloc.c:393)
+==93707==    by 0x10919E: main (memleak.c:46)
+==93707== 
+==93707== Conditional jump or move depends on uninitialised value(s)		##error 3 : Conditional jump or move depends on uninitialised value(s)
+==93707==    at 0x48E0AD6: __vfprintf_internal (vfprintf-internal.c:1516)
+==93707==    by 0x48CA79E: printf (printf.c:33)
+==93707==    by 0x109214: main (memleak.c:57)
+==93707== 
+==93707== Use of uninitialised value of size 8		##error 4 : Use of uninitialised value
+==93707==    at 0x48C42EB: _itoa_word (_itoa.c:177)
+==93707==    by 0x48DFABD: __vfprintf_internal (vfprintf-internal.c:1516)
+==93707==    by 0x48CA79E: printf (printf.c:33)
+==93707==    by 0x109214: main (memleak.c:57)
+==93707== 
+==93707== Conditional jump or move depends on uninitialised value(s)		##error 3 : Conditional jump or move depends on uninitialised value(s)
+==93707==    at 0x48C42FC: _itoa_word (_itoa.c:177)
+==93707==    by 0x48DFABD: __vfprintf_internal (vfprintf-internal.c:1516)
+==93707==    by 0x48CA79E: printf (printf.c:33)
+==93707==    by 0x109214: main (memleak.c:57)
+==93707== 
+==93707== Conditional jump or move depends on uninitialised value(s)		##error 3 : Conditional jump or move depends on uninitialised value(s)
+==93707==    at 0x48E05C3: __vfprintf_internal (vfprintf-internal.c:1516)
+==93707==    by 0x48CA79E: printf (printf.c:33)
+==93707==    by 0x109214: main (memleak.c:57)
+==93707== 
+==93707== Conditional jump or move depends on uninitialised value(s)		##error 3 : Conditional jump or move depends on uninitialised value(s)
+==93707==    at 0x48DFC05: __vfprintf_internal (vfprintf-internal.c:1516)
+==93707==    by 0x48CA79E: printf (printf.c:33)
+==93707==    by 0x109214: main (memleak.c:57)
+==93707== 
+==93707== Argument 'size' of function malloc has a fishy (possibly negative) value: -40		##error 5 : Argument 'size' of function malloc has a fishy (possibly negative) value
+==93707==    at 0x484884F: malloc (vg_replace_malloc.c:393)
+==93707==    by 0x109220: main (memleak.c:61)
+==93707== 
+==93707== Invalid free() / delete / delete[] / realloc()		##error 6 : Invalid free() / delete / delete[] / realloc()
+==93707==    at 0x484B0C4: free (vg_replace_malloc.c:884)
+==93707==    by 0x10924A: main (memleak.c:65)
+==93707==  Address 0x4a964f0 is 0 bytes inside a block of size 40 free'd
+==93707==    at 0x484B0C4: free (vg_replace_malloc.c:884)
+==93707==    by 0x10923E: main (memleak.c:64)
+==93707==  Block was alloc'd at
+==93707==    at 0x484884F: malloc (vg_replace_malloc.c:393)
+==93707==    by 0x10922E: main (memleak.c:63)
+==93707== 
+==93707== 
+==93707== HEAP SUMMARY:
+==93707==     in use at exit: 40 bytes in 1 blocks
+==93707==   total heap usage: 3 allocs, 3 frees, 1,104 bytes allocated
+==93707== 
+==93707== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==93707==    at 0x484884F: malloc (vg_replace_malloc.c:393)
+==93707==    by 0x10919E: main (memleak.c:46)
+==93707== 
+==93707== LEAK SUMMARY:
+==93707==    definitely lost: 40 bytes in 1 blocks
+==93707==    indirectly lost: 0 bytes in 0 blocks
+==93707==      possibly lost: 0 bytes in 0 blocks
+==93707==    still reachable: 0 bytes in 0 blocks
+==93707==         suppressed: 0 bytes in 0 blocks
+==93707== 
+==93707== Use --track-origins=yes to see where uninitialised values come from
+==93707== For lists of detected and suppressed errors, rerun with: -s
+==93707== ERROR SUMMARY: 10 errors from 10 contexts (suppressed: 0 from 0)
