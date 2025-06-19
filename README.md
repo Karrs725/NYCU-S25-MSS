@@ -6,5 +6,5 @@
 
 ---
 
-1. [Assignment I](https://github.com/Karrs725/NYCUS25-MSS/tree/master/HW1) - FIO
-2. [Assignment II](https://github.com/Karrs725/NYCUS25-MSS/tree/master/HW2) - Valgrind & Pytorch profiler
+1. [Assignment I](https://github.com/Karrs725/NYCU-S25-MSS/tree/master/HW1) - FIO
+2. [Assignment II](https://github.com/Karrs725/NYCU-S25-MSS/tree/master/HW2) - Valgrind & Pytorch profiler
