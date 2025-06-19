@@ -1,4 +1,4 @@
-# NYCUS25-MSS
+# NYCU-S25-MSS
 
 - 課程名稱 Course Name：記憶體與儲存系統 Memory and Storage Systems
 - 授課教師 Lecturer：吳俊峯
